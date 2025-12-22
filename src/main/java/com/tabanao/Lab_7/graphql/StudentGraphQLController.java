@@ -1,7 +1,6 @@
 package com.tabanao.Lab_7.graphql;
 
 import com.tabanao.Lab_7.model.Student;
-import com.tabanao.Lab_7.service.StudentService;
 import org.springframework.graphql.data.method.annotation.MutationMapping;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
 import org.springframework.stereotype.Controller;
@@ -31,5 +30,15 @@ public class StudentGraphQLController {
                 .course(course)
                 .build();
         return service.saveStudent(student);
+    }
+
+    private class StudentService {
+        public List<Student> getAllStudents() {
+            return List.of();
+        }
+
+        public Student saveStudent(Student student) {
+            return student;
+        }
     }
 }
