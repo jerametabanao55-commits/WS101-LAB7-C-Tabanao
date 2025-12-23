@@ -1,3 +1,4 @@
+# noinspection GraphQLTypeRedefinition
 type Product {
     id: ID!
     name: String!
